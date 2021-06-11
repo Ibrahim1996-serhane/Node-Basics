@@ -40,12 +40,21 @@ function onDataReceived(text) {
   else if(text === 'hello\n'){
     hello();
   }
+  else if(text === 'help\n'){
+    help();
+  }
   else{
     unknownCommand(text);
   }
 }
 
 
+function help(){
+
+ console.log("quit: quits the application\n");
+ console.log("exit: quits the application\n");
+ 
+}
 /**
  * prints "unknown command"
  * This function is supposed to run when all other commands have failed
@@ -77,6 +86,11 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+function exit(){
+  console.log('Quitting now, goodbye!')
+  process.exit();
+}
+
 
 // The following line starts the application
 startApp("Ibrahim Serhane")
