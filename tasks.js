@@ -52,6 +52,9 @@ function onDataReceived(text) {
   else if(text.trim().slice(0,3)==='add'){
     add(text);
    }
+   else if(text.trim().slice(0,6)==='remove'){
+    remove(text);
+   }
   else{
     unknownCommand(text);
   }
@@ -59,7 +62,6 @@ function onDataReceived(text) {
 const tasks = ["Read a book", "Organize office","Meet George"];
 
 function add(x) {
-  
     if(x.trim()==="add"){
       console.log("Error! enter a value!!!")
     }
@@ -68,6 +70,23 @@ function add(x) {
       console.log(tasks);
     }
   } 
+  function remove(x) {
+    if(x.trim()==="remove"){
+      tasks.pop(x);
+      console.log(tasks);
+    }
+   else{
+       if(x[7]==1){
+         tasks.shift();
+        console.log(tasks);
+        }
+       else if(x[7]==2){
+        tasks.splice(1,1);
+       console.log(tasks);
+       }
+    }
+  }
+  
 function list(){
   console.log(tasks);
 }
@@ -80,6 +99,7 @@ function help(){
  console.log("quit: quits the application\n");
  console.log("exit: quits the application\n");
  console.log("hello W/ ----   : hello ---!  ") ;
+ console.log("add: quits the application\n");
 }
 /**
  * prints "unknown command"
