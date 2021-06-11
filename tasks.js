@@ -59,6 +59,7 @@ function onDataReceived(text) {
 const tasks = ["Read a book", "Organize office","Meet George"];
 
 function add(x) {
+  
     if(x.trim()==="add"){
       console.log("Error! enter a value!!!")
     }
