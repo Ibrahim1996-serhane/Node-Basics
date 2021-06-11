@@ -40,20 +40,26 @@ function onDataReceived(text) {
   else if(text === 'hello\n'){
     hello();
   }
+  else if (text.slice(0, 5) === "hello") {
+    batata(text); 
+  }
   else if(text === 'help\n'){
     help();
   }
+
   else{
     unknownCommand(text);
   }
 }
 
-
+function batata(text){
+  console.log(text.replace("\n","")+"!");
+}
 function help(){
 
  console.log("quit: quits the application\n");
  console.log("exit: quits the application\n");
- 
+ console.log("hello W/ ----   : hello ---!  ") ;
 }
 /**
  * prints "unknown command"
