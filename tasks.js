@@ -46,10 +46,29 @@ function onDataReceived(text) {
   else if(text === 'help\n'){
     help();
   }
-
+  else if(text === 'list\n'){
+   list();
+  }
+  else if(text.trim().slice(0,3)==='add'){
+    add(text);
+   }
   else{
     unknownCommand(text);
   }
+}
+const tasks = ["Read a book", "Organize office","Meet George"];
+
+function add(x) {
+    if(x.trim()==="add"){
+      console.log("Error! enter a value!!!")
+    }
+    else{
+      tasks.push(x);
+      console.log(tasks);
+    }
+  } 
+function list(){
+  console.log(tasks);
 }
 
 function batata(text){
