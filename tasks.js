@@ -96,10 +96,13 @@ function batata(text){
 }
 function help(){
 
- console.log("quit: quits the application\n");
- console.log("exit: quits the application\n");
- console.log("hello W/ ----   : hello ---!  ") ;
- console.log("add: quits the application\n");
+ console.log("quit:     quits the application\n");
+ console.log("exit:     quits the application\n");
+ console.log("hello:     W/ ----   : hello ---!  ") ;
+ console.log("add:      quits the application\n");
+ console.log("remove 2: remove the last task in the tasks\n");
+ console.log("remove 2: remove the first task in the tasks\n");
+ console.log("remove 2: remove the second task in the tasks\n");
 }
 /**
  * prints "unknown command"
